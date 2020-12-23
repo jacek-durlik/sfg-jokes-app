@@ -11,7 +11,7 @@ import pl.anril.sfgjokesapp.services.JokeService;
 public class JokesController {
     private final JokeService jokeService;
 
-    @RequestMapping(value = {"/", ""})
+    @RequestMapping(value = "")
     public String getJoke(Model model) {
         model.addAttribute("joke", jokeService.getJoke());
         return "chucknorris";
