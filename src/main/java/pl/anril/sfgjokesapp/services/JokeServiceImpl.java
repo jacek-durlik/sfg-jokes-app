@@ -5,9 +5,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class JokeServiceImpl implements JokeService {
 
-    public final ChuckNorrisQuotes chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public final ChuckNorrisQuotes chuckNorrisQuotes;
 
     public String getJoke() {
         return chuckNorrisQuotes.getRandomQuote();
